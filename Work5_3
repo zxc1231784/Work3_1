@@ -1,0 +1,64 @@
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
+public class Work5_3 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		GregorianCalendar gc = new GregorianCalendar();
+		int ny[] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		int yyyy = 0, mm = 0, dd = 0;
+		int sum = 0;
+		do {
+			System.out.println("請輸入西元年份:");
+			yyyy = sc.nextInt();
+
+		} while (yyyy <= -1);
+		// System.out.println(yyyy);
+
+		do {
+			System.out.println("請輸入月份:");
+			mm = sc.nextInt();
+
+		} while (mm < 1 || mm > 12);
+		// System.out.println(mm);
+		if (mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12) {
+			do {
+				System.out.println("請輸入日期:");
+				dd = sc.nextInt();
+			} while (dd < 1 || dd > 31);
+			System.out.println(dd);
+		} else {
+			if (mm == 4 || mm == 6 || mm == 9 || mm == 11) {
+				do {
+					System.out.println("請輸入日期:");
+					dd = sc.nextInt();
+				} while (dd < 1 || dd > 30);
+			} else {
+				if (mm == 2) {
+					if (gc.isLeapYear(yyyy)) {
+						do {
+							System.out.println("請輸入日期:");
+							dd = sc.nextInt();
+						} while (dd < 1 || dd > 29);
+					} else {
+						if (mm == 2) {
+							do {
+								System.out.println("請輸入日期:");
+								dd = sc.nextInt();
+							} while (dd < 1 || dd > 28);
+						}
+					}
+				}
+			}
+			System.out.println(dd);
+		}
+		for (int i = 0; i < mm; i++) {
+			sum = sum + ny[i];
+		}
+		System.out.println("西元" + yyyy + "年" + mm + "月" + dd + "日");
+		System.out.println("西元" + yyyy + "年的第幾" + (sum + dd) + "天");
+
+	}
+
+}
