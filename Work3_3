@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class Work3_3 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a;
+		int b;
+		System.out.println("請輸入第一個數字:");
+		a = sc.nextInt();
+		System.out.println("請輸入第二個數字:");
+		b = sc.nextInt();
+		System.out.println(a + "+" + b + "=" + (a + b));
+		System.out.println(a + "-" + b + "=" + (a - b));
+		System.out.println(a + "*" + b + "=" + (a * b));
+		System.out.println(a + "/" + b + "=" + (a / b));
+		System.out.println(a + "%" + b + "=" + (a % b));
+
+	}
+
+}
