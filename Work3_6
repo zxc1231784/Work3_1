@@ -1,0 +1,13 @@
+
+public class Work3_6 {
+
+	public static void main(String[] args) {
+		int a=10;
+		System.out.println("面積="+a*a);
+		System.out.println("內接圓差="+a*3.14*3.14);
+		System.out.println("面積與內接圓面積差="+(a*a-a*3.14*3.14));
+		
+
+	}
+
+}
