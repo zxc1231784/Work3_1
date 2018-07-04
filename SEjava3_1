@@ -1,0 +1,16 @@
+
+public class SEjava3_1 {
+
+	public static void main(String[] args) {
+		int m = 1000, n = 495;
+		int max = 0;
+		for (int i = 1; i <= n; i++) {
+			if (m % i == 0 && n % i == 0) {
+				max = i;
+
+			}
+
+		}
+		System.out.println(max);
+	}
+}
