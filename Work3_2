@@ -1,0 +1,16 @@
+public class Work3_2 {
+
+	public static void main(String[] args) {
+		int a = 256559;
+		int ss = 0;
+		int dd = 256559 / (60 * 60 * 24);
+		ss = a - (60 * 60 * 24 * 2);
+		int hh = (ss / (60 * 60));
+		ss = ss - (hh * 60 * 60);
+		int mm = ss / 60;
+		ss = ss - (mm * 60);
+		System.out.println(a + "秒為" + dd + "天" + hh + "小時" + mm + "分" + ss + "秒");
+
+	}
+
+}
